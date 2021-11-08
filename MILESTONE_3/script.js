@@ -1,3 +1,6 @@
+// RICHIAMO TUTTE LE VARIABILI
+const selectors = document.getElementById("selector");
+console.log(selector);
 const container = document.getElementById("container");
 const cards =
 [
@@ -115,18 +118,41 @@ const cards =
 	}
 ];
 
-generateCard(cards);
+// FACCIO PARTIRE TUTTO
+inizio()
 
-function generateCard(){
-  for (let index in cards){
-    let card = cards[index];
+selectors.addEventListener("change", (eee) => {
+	let selector = eee.target.value;
+	inizio(selector);
+});
+
+function generateCard(arr){
+		container.innerHTML = "";
+		arr.forEach(card => {
+  	const upperName = card.name.toUpperCase();
 
     container.innerHTML +=
     `
       <div class="box">
         <i class="${card.family} ${card.prefix}${card.name} ${card.color}"></i>
-        <p>${card.name}</p>
+        <p>${upperName}</p>
       </div>
-    `
-  }
-}
+    `;
+	}
+)};
+
+// SUDDIVIDO IN CATEGORIE SELEZIONABILI
+function inizio(selector){
+	if(selector == 2){
+		const selectorAnimals = cards.filter((oggetto) => oggetto.type === "animal");
+		generateCard(selectorAnimals);
+	} else if(selector == 3){
+		const selectorVegetable = cards.filter((oggetto) => oggetto.type === "vegetable");
+		generateCard(selectorVegetable);
+	} else if(selector == 4){
+		const selectorUser = cards.filter((oggetto) => oggetto.type === "user");
+		generateCard(selectorUser);
+	} else{
+		generateCard(cards);
+	}
+};

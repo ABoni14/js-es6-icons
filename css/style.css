@@ -1,13 +1,16 @@
 header{
+  font-family: 'Acme', sans-serif;
   height: 60px;
 }
 
 .nav-container{
+  font-family: 'Acme', sans-serif;
   background-color: #29b1dd;
   height: 60px;
 }
 
 main{
+  font-family: 'Acme', sans-serif;
   height: calc(100vh - 120px);
   background-color: #dddddd;
 }
