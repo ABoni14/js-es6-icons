@@ -1,0 +1,30 @@
+header{
+  height: 60px;
+}
+
+.nav-container{
+  background-color: #29b1dd;
+  height: 60px;
+}
+
+main{
+  height: calc(100vh - 120px);
+  background-color: #dddddd;
+}
+
+.box{
+  margin: 20px;
+  height: 80px;
+  width: 160px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.box i{
+  font-size: 30px;
+}
