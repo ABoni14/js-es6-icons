@@ -28,3 +28,15 @@ main{
 .box i{
   font-size: 30px;
 }
+
+.fas.blue{
+  color: #0000ff;
+}
+
+.fas.orange{
+  color: #ffa500;
+}
+
+.fas.violet{
+  color: #800080;
+}
